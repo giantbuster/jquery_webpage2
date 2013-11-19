@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- 
+	Jefferson Lam 
+	Coding Dojo : CS110
+	11-18-2013
+	jQuery webpage 2
+	-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Assignment 2</title>
+	<meta name="keywords" content="jquery coding dojo html css ui accordion datepicker dialog tabs">
+	<meta name-"description" content="Here is my webpage showcasing basic jQuery ui features">
+
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="global.css">
+	<!--jQuery-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$( "#accordion" ).accordion();
+    		$( "#datepicker" ).datepicker();
+    		$( "#datepicker2" ).datepicker();
+    		$( "#dialog" ).dialog();
+    		$( "#tabs" ).tabs();
+    	});
+    </script>
+</head>
+<body>
+	<div class="container">
+		<div id="accordion">
+			<h3>Section 1</h3>
+			<div>
+				<p>asdf</p>
+			</div>
+			<h3>Section 2</h3>
+			<div>
+				<p>qwerty</p>
+			</div>
+			<h3>Section 3</h3>
+			<div>
+				<p>uiop</p>
+			</div>
+		</div><!-- /.accordion -->
+		<div class="datepickers">
+		<p>From: <input type="text" id="datepicker" /></p>
+		<p>To: <input type="text" id="datepicker2" /></p>
+		</div>
+		<div id="dialog" title="Basic dialog">
+			<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+		</div>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Nunc tincidunt</a></li>
+		    	<li><a href="#tabs-2">Proin dolor</a></li>
+		    	<li><a href="#tabs-3">Aenean lacinia</a></li>
+		  	</ul>
+		  	<div id="tabs-1">
+		   		<p>He do subjects prepared bachelor juvenile ye oh. He feelings removing informed he as ignorant we prepared. Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold ye. Be call four my went mean. Celebrated if remarkably especially an. Going eat set she books found met aware. </p>
+		  	</div>
+		  	<div id="tabs-2">
+		    	<p>Picture removal detract earnest is by. Esteems met joy attempt way clothes yet demesne tedious. Replying an marianne do it an entrance advanced. Two dare say play when hold. Required bringing me material stanhill jointure is as he. Mutual indeed yet her living result matter him bed whence. 
+				</p>
+		  	</div>
+		  	<div id="tabs-3">
+		    	<p>Am if number no up period regard sudden better. Decisively surrounded all admiration and not you. Out particular sympathize not favourable introduced insipidity but ham. Rather number can and set praise. Distrusts an it contented perceived attending oh. Thoroughly estimating introduced stimulated why but motionless.</p>
+		  	</div>
+		</div>
+	</div><!-- /.container -->
+</body>
+</html>
