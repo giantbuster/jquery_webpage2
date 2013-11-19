@@ -3,7 +3,7 @@
 	Jefferson Lam 
 	Coding Dojo : CS110
 	11-18-2013
-	jQuery webpage 2
+	jQuery UI webpage
 	-->
 <html>
 <head>
@@ -12,8 +12,16 @@
 	<meta name="keywords" content="jquery coding dojo html css ui accordion datepicker dialog tabs">
 	<meta name-"description" content="Here is my webpage showcasing basic jQuery ui features">
 
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery UI Theme-->
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+	<!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="global.css">
+
 	<!--jQuery-->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
@@ -22,51 +30,149 @@
     		$( "#accordion" ).accordion();
     		$( "#datepicker" ).datepicker();
     		$( "#datepicker2" ).datepicker();
-    		$( "#dialog" ).dialog();
     		$( "#tabs" ).tabs();
     	});
+    	$(function() {
+			$( "#dialog" ).dialog({
+				autoOpen: false
+			});
+			$( "#dialog-btn" ).click(function() {
+				$( "#dialog" ).dialog( "open" );
+			});
+		});
     </script>
 </head>
 <body>
 	<div class="container">
-		<div id="accordion">
-			<h3>Section 1</h3>
-			<div>
-				<p>asdf</p>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-md-12">
+					<!-- Static navbar -->
+				      <div class="navbar navbar-default" role="navigation">
+				        <div class="navbar-header">
+				          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				            <span class="sr-only">Toggle navigation</span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				          </button>
+				          <a class="navbar-brand" href="#">The Formidable</a>
+				        </div>
+				        <div class="navbar-collapse collapse">
+				          <ul class="nav navbar-nav">
+				            <li class="active"><a href="#">About</a></li>
+				            <li><a href="#">Contact</a></li>
+				            <li><a href="#">Media</a></li>
+				            <li class="dropdown">
+				              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Related <b class="caret"></b></a>
+				              <ul class="dropdown-menu">
+				                <li><a href="#">Action</a></li>
+				                <li><a href="#">Another action</a></li>
+				                <li><a href="#">Something else here</a></li>
+				                <li class="divider"></li>
+				                <li class="dropdown-header">Nav header</li>
+				                <li><a href="#">Separated link</a></li>
+				                <li><a href="#">One more separated link</a></li>
+				              </ul>
+				            </li>
+				          </ul>
+				          <ul class="nav navbar-nav navbar-right">
+				            <li><a href="../navbar-fixed-top/">Coding Dojo</a></li>
+				          </ul>
+				        </div><!--/.nav-collapse -->
+				      </div>
+
+				      <!-- Main component for a primary marketing message or call to action -->
+				      <div class="jumbotron">
+				        <h1>Salvation is here!</h1>
+				        <p>Although I am not a painter, I think that the sublime beauty of the negative space endangers the devious simplicity of a participation in the critical dialogue of the 90s. </p>
+				      </div>
+					</div>
+				<div class="row">
+					<div class="col-md-7">
+						<div>
+							<div id="tabs">
+								<ul>
+									<li><a href="#tabs-1">Nunc tincidunt</a></li>
+							    	<li><a href="#tabs-2">Proin dolor</a></li>
+							    	<li><a href="#tabs-3">Aenean lacinia</a></li>
+							    	<li><a href="#tabs-4">Fillerati</a></li>
+							  	</ul>
+							  	<div id="tabs-1">
+							   		<p>He do subjects prepared bachelor juvenile ye oh. He feelings removing informed he as ignorant we prepared. Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold ye. Be call four my went mean. Celebrated if remarkably especially an. Going eat set she books found met aware. </p>
+							  	</div>
+							  	<div id="tabs-2">
+							    	<p>Picture removal detract earnest is by. Esteems met joy attempt way clothes yet demesne tedious. Replying an marianne do it an entrance advanced. Two dare say play when hold. Required bringing me material stanhill jointure is as he. Mutual indeed yet her living result matter him bed whence. 
+									</p>
+							  	</div>
+							  	<div id="tabs-3">
+							    	<p>Am if number no up period regard sudden better. Decisively surrounded all admiration and not you. Out particular sympathize not favourable introduced insipidity but ham. Rather number can and set praise. Distrusts an it contented perceived attending oh. Thoroughly estimating introduced stimulated why but motionless.</p>
+							  	</div>
+							  	<div id="tabs-4">
+							    	<p>Meantime, overseeing the other part of the ship, Captain Peleg ripped and swore astern in the most frightful manner. I almost thought he would sink the ship before the anchor could be got up; involuntarily I paused on my handspike, and told Queequeg to do the same, thinking of the perils we both ran, in starting on the voyage with such a devil for a pilot.</p>
+							  	</div>
+							</div>
+						</div>
+						<div class="date-area">
+							<div class="col-md-6">
+								<label>From: </label><input type="text" id="datepicker" />
+							</div>
+							<div class="col-md-6">
+								<label>To: </label><input type="text" id="datepicker2" />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div id="accordion">
+							<h3>Section 1</h3>
+							<div>
+								<p>asdf</p>
+							</div>
+							<h3>Section 2</h3>
+							<div>
+								<p>qwerty</p>
+							</div>
+							<h3>Section 3</h3>
+							<div>
+								<p>uiop</p>
+							</div>
+							<h3>Section 3</h3>
+							<div>
+								<p>uiop</p>
+							</div>
+							<h3>Section 3</h3>
+							<div>
+								<p>uiop</p>
+							</div>
+							<h3>Section 3</h3>
+							<div>
+								<p>uiop</p>
+							</div>
+							<h3>Section 3</h3>
+							<div>
+								<p>uiop</p>
+							</div>
+							<h3>Section 3</h3>
+							<div>
+								<p>uiop</p>
+							</div>
+
+						</div><!-- /.accordion -->			
+					</div>
+				</div><!-- /.row -->
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4">
+						<button id="dialog-btn" class="btn btn-lg btn-primary btn-block">Let's go</button>
+					</div>
+				</div> 
+				<div id="dialog" title="Merlot" class="popup-dialog">
+					<p>The 1993 Merlot from Pepperoni Bros Vineyards brings together thick vodka essences with a grimy sage finish.</p>
+				</div>
 			</div>
-			<h3>Section 2</h3>
-			<div>
-				<p>qwerty</p>
-			</div>
-			<h3>Section 3</h3>
-			<div>
-				<p>uiop</p>
-			</div>
-		</div><!-- /.accordion -->
-		<div class="datepickers">
-		<p>From: <input type="text" id="datepicker" /></p>
-		<p>To: <input type="text" id="datepicker2" /></p>
-		</div>
-		<div id="dialog" title="Basic dialog">
-			<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-		</div>
-		<div id="tabs">
-			<ul>
-				<li><a href="#tabs-1">Nunc tincidunt</a></li>
-		    	<li><a href="#tabs-2">Proin dolor</a></li>
-		    	<li><a href="#tabs-3">Aenean lacinia</a></li>
-		  	</ul>
-		  	<div id="tabs-1">
-		   		<p>He do subjects prepared bachelor juvenile ye oh. He feelings removing informed he as ignorant we prepared. Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold ye. Be call four my went mean. Celebrated if remarkably especially an. Going eat set she books found met aware. </p>
-		  	</div>
-		  	<div id="tabs-2">
-		    	<p>Picture removal detract earnest is by. Esteems met joy attempt way clothes yet demesne tedious. Replying an marianne do it an entrance advanced. Two dare say play when hold. Required bringing me material stanhill jointure is as he. Mutual indeed yet her living result matter him bed whence. 
-				</p>
-		  	</div>
-		  	<div id="tabs-3">
-		    	<p>Am if number no up period regard sudden better. Decisively surrounded all admiration and not you. Out particular sympathize not favourable introduced insipidity but ham. Rather number can and set praise. Distrusts an it contented perceived attending oh. Thoroughly estimating introduced stimulated why but motionless.</p>
-		  	</div>
-		</div>
+		</div><!-- /.main container row -->
 	</div><!-- /.container -->
+
+
 </body>
 </html>

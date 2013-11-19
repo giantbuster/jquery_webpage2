@@ -1,0 +1,50 @@
+p{
+	font-size: 0.7em;
+}
+
+
+.jumbotron{
+	height: 180px;
+	padding: 20px;
+	margin-bottom: 30px;
+	background-image:url('yellow.jpg');
+	background-position: middle left;
+}
+
+.jumbotron h1{
+	color: white;
+}
+.jumbotron p{
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 4px;
+	font-size: 0.6em;
+}
+
+.jumbotron h1{
+	font-size: 2.0em;
+}
+
+.date-area{
+	padding: 35px 10px 10px 10px;
+	height: 230px;
+	margin-bottom: 20px;
+	/*background: lightblue;*/
+	border: 1px solid #AAAAAA;
+	border-radius: 8px;
+	margin-top: -10px;
+	vertical-align: bottom;
+}
+
+.btn{
+	background:#8C5A35;
+	border: #800000;
+}
+.btn:hover{
+	background:#623E30;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+	padding: 1px 10px;
+	font-size: 0.9em;
+}
